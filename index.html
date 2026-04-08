@@ -12,10 +12,10 @@
   <script src="./assets/js/language-switcher.js" defer></script>
 </head>
 <body>
-  <header class="nav">
+ <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="M3L Architecture">
-        <span class="brand-mark"><img class="brand-logo" width="60" height="auto" src="./assets/img/m3l-logo.svg" alt="M3L Architecture" /></span>
+        <span class="brand-mark"><img class="brand-logo" src="./assets/img/m3l-logo.svg" alt="M3L Architecture" /></span>
         <span>M3L Architecture</span>
       </a>
 
@@ -25,6 +25,14 @@
             <span class="lang pt-br">Sobre</span>
             <span class="lang en-us" hidden>About</span>
           </a>
+          <a href="#results">
+            <span class="lang pt-br">Resultados</span>
+            <span class="lang en-us" hidden>Results</span>
+          </a>
+          <a href="#audience">
+            <span class="lang pt-br">Aplicação</span>
+            <span class="lang en-us" hidden>Use cases</span>
+          </a>
           <a href="#principles">
             <span class="lang pt-br">Princípios</span>
             <span class="lang en-us" hidden>Principles</span>
@@ -32,10 +40,6 @@
           <a href="#repos">
             <span class="lang pt-br">Repositórios</span>
             <span class="lang en-us" hidden>Repositories</span>
-          </a>
-          <a href="#manifesto">
-            <span class="lang pt-br">Manifesto</span>
-            <span class="lang en-us" hidden>Manifesto</span>
           </a>
         </nav>
 
@@ -56,28 +60,28 @@
             <span class="lang en-us" hidden>Modular in 3 Layers</span>
           </div>
           <h1>
-            <span class="lang pt-br">Arquitetura modular com menos acoplamento e mais clareza.</span>
-            <span class="lang en-us" hidden>Modular architecture with less coupling and more clarity.</span>
+            <span class="lang pt-br">Estruture o backend para crescer com mais previsibilidade e menos atrito.</span>
+            <span class="lang en-us" hidden>Structure your backend to grow with more predictability and less friction.</span>
           </h1>
           <p class="lead">
-            <span class="lang pt-br">M3L é um padrão arquitetural para backends que organiza a aplicação por módulos de negócio e separa responsabilidades em três camadas: <strong>Http</strong>, <strong>Domain</strong> e <strong>Infrastructure</strong>.</span>
-            <span class="lang en-us" hidden>M3L is an architectural pattern for backends that organizes the application by business modules and separates responsibilities into three layers: <strong>Http</strong>, <strong>Domain</strong>, and <strong>Infrastructure</strong>.</span>
+            <span class="lang pt-br">M3L é um padrão arquitetural para backends que ajuda equipes a iniciar projetos com mais clareza, reduzir acoplamento desnecessário e evoluir sistemas com mais segurança. A aplicação é organizada por módulos de negócio e separada em três camadas: <strong>Http</strong>, <strong>Domain</strong> e <strong>Infrastructure</strong>.</span>
+            <span class="lang en-us" hidden>M3L is an architectural pattern for backends that helps teams start projects with more clarity, reduce unnecessary coupling, and evolve systems with more confidence. The application is organized by business modules and separated into three layers: <strong>Http</strong>, <strong>Domain</strong>, and <strong>Infrastructure</strong>.</span>
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#repos">
-              <span class="lang pt-br">Explorar repositórios</span>
-              <span class="lang en-us" hidden>Explore repositories</span>
+            <a class="button button-primary" href="#results">
+              <span class="lang pt-br">Ver resultados práticos</span>
+              <span class="lang en-us" hidden>See practical results</span>
             </a>
-            <a class="button button-secondary" href="https://github.com/m3larch" target="_blank" rel="noreferrer">
-              <span class="lang pt-br">Ver no GitHub</span>
-              <span class="lang en-us" hidden>View on GitHub</span>
+            <a class="button button-secondary" href="#repos">
+              <span class="lang pt-br">Explorar implementações</span>
+              <span class="lang en-us" hidden>Explore implementations</span>
             </a>
           </div>
 
           <div class="hero-note">
-            <span class="lang pt-br">Simples o suficiente para começar. Estruturado o suficiente para crescer.</span>
-            <span class="lang en-us" hidden>Simple enough to start. Structured enough to grow.</span>
+            <span class="lang pt-br">Feito para times reais: claro o suficiente para começar, disciplinado o suficiente para sustentar o crescimento.</span>
+            <span class="lang en-us" hidden>Built for real teams: clear enough to start, disciplined enough to sustain growth.</span>
           </div>
         </div>
 
@@ -109,7 +113,7 @@
           </h2>
           <p>
             <span class="lang pt-br"><strong>M3L não é apenas uma forma de organizar pastas e arquivos.</strong> Ele nasce de anos lidando com o que funciona e, principalmente, com o que degrada projetos ao longo do tempo. Foi no contato com o caos real do desenvolvimento — e no estudo da arquitetura dos principais frameworks, tanto de backend quanto de frontend — que surgiu o impulso de propor uma mudança de direção. Mas não por meio de rupturas artificiais, nem pela imposição de <strong>modelos arquiteturais complexos</strong>, excessivamente teóricos ou desconectados da realidade dos times. Com pragmatismo, clareza e disciplina, sem exigir uma sofisticação que muitas vezes não conversa com o contexto, a maturidade técnica e a senioridade de determinadas equipes, o M3L se propõe a servir como um caminho viável tanto para a iniciação mais sólida de novos projetos quanto para a correção gradual de estruturas que se tornaram confusas, frágeis ou excessivamente acopladas ao longo do tempo.</span>
-            <span class="lang en-us" hidden><strong>M3L is not just a way to organize folders and files.</strong> It comes from years of dealing with what works and, above all, with what gradually degrades projects over time. It was through contact with the real chaos of development — and by studying the architecture of the main backend and frontend frameworks — that the drive to propose a change in direction emerged. But not through artificial disruption, nor by imposing <strong>complex architectural models</strong> that are overly theoretical or disconnected from the reality of teams. With pragmatism, clarity, and discipline, without demanding a level of sophistication that often does not match the context, technical maturity, or seniority of certain teams, M3L aims to serve as a viable path both for the stronger initiation of new projects and for the gradual correction of structures that have become confusing, fragile, or excessively coupled over time.</span>
+            <span class="lang en-us" hidden><strong>M3L is not just a way to organize folders and files.</strong> It comes from years of dealing with what works and, above all, with what gradually degrades projects over time. It was through contact with the real chaos of development — and by studying the architecture of the main backend and frontend frameworks — that the drive to propose a change in direction emerged. But not through artificial disruption, nor by imposing <strong>complex architectural models</strong> that are overly theoretical or disconnected from the reality of teams. With pragmatism, clarity, and discipline, without demanding a level of sophistication that often does not match the context, technical maturity, or seniority of certain teams, M3L aims to serve as a viable path both for a stronger start to new projects and for the gradual correction of structures that have become confusing, fragile, or excessively coupled over time.</span>
           </p>
         </div>
 
@@ -120,8 +124,8 @@
               <span class="lang en-us" hidden>Module first</span>
             </h3>
             <p>
-              <span class="lang pt-br">O sistema é organizado por contexto de negócio, não por pastas globais genéricas.</span>
-              <span class="lang en-us" hidden>The system is organized by business context, not by generic global folders.</span>
+              <span class="lang pt-br">O sistema é organizado por contexto de negócio, evitando depósitos centrais genéricos e reduzindo dispersão estrutural.</span>
+              <span class="lang en-us" hidden>The system is organized by business context, avoiding generic central dumping grounds and reducing structural sprawl.</span>
             </p>
           </article>
           <article class="card">
@@ -130,18 +134,126 @@
               <span class="lang en-us" hidden>Layer after</span>
             </h3>
             <p>
-              <span class="lang pt-br">Cada módulo separa entrada HTTP, orquestração de caso de uso e persistência/leitura.</span>
-              <span class="lang en-us" hidden>Each module separates HTTP input, use case orchestration, and persistence/read concerns.</span>
+              <span class="lang pt-br">Cada módulo separa entrada HTTP, orquestração de caso de uso e persistência/leitura com responsabilidade explícita.</span>
+              <span class="lang en-us" hidden>Each module separates HTTP entry, use case orchestration, and persistence/read concerns with explicit responsibility.</span>
             </p>
           </article>
           <article class="card">
             <h3>
-              <span class="lang pt-br">Responsabilidade clara</span>
-              <span class="lang en-us" hidden>Clear responsibility</span>
+              <span class="lang pt-br">Disciplina com viabilidade</span>
+              <span class="lang en-us" hidden>Discipline with viability</span>
             </h3>
             <p>
-              <span class="lang pt-br">Controller recebe. Service orquestra. Business decide. Model persiste. Query lê.</span>
-              <span class="lang en-us" hidden>Controller receives. Service orchestrates. Business decides. Model persists. Query reads.</span>
+              <span class="lang pt-br">O padrão busca elevar a qualidade técnica sem impor complexidade incompatível com a realidade operacional do time.</span>
+              <span class="lang en-us" hidden>The pattern aims to raise technical quality without imposing complexity that clashes with the team's operational reality.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="results">
+      <div class="container">
+        <div class="section-head">
+          <h2>
+            <span class="lang pt-br">O que o M3L ajuda a melhorar</span>
+            <span class="lang en-us" hidden>What M3L helps improve</span>
+          </h2>
+          <p>
+            <span class="lang pt-br">A proposta não é vender arquitetura como ornamento técnico. A proposta é melhorar a operação do time, reduzir atrito na evolução do software e tornar a estrutura mais previsível para quem desenvolve, revisa e sustenta.</span>
+            <span class="lang en-us" hidden>The point is not to sell architecture as a technical ornament. The point is to improve team operations, reduce friction in software evolution, and make the structure more predictable for those who build, review, and sustain it.</span>
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <div class="benefit-number">01</div>
+            <h3>
+              <span class="lang pt-br">Onboarding mais rápido</span>
+              <span class="lang en-us" hidden>Faster onboarding</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">Novos desenvolvedores entendem com mais facilidade onde cada responsabilidade nasce e até onde ela deve ir.</span>
+              <span class="lang en-us" hidden>New developers understand more easily where each responsibility begins and how far it should go.</span>
+            </p>
+          </article>
+          <article class="card">
+            <div class="benefit-number">02</div>
+            <h3>
+              <span class="lang pt-br">Menos retrabalho estrutural</span>
+              <span class="lang en-us" hidden>Less structural rework</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">O padrão reduz improvisações que parecem ágeis no início, mas custam caro quando o projeto cresce.</span>
+              <span class="lang en-us" hidden>The pattern reduces improvisations that look agile at first but become expensive as the project grows.</span>
+            </p>
+          </article>
+          <article class="card">
+            <div class="benefit-number">03</div>
+            <h3>
+              <span class="lang pt-br">Revisão de código mais objetiva</span>
+              <span class="lang en-us" hidden>More objective code review</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">Com responsabilidades claras por camada, fica mais fácil identificar desvio arquitetural e corrigir cedo.</span>
+              <span class="lang en-us" hidden>With clear responsibilities per layer, it becomes easier to identify architectural drift and correct it early.</span>
+            </p>
+          </article>
+          <article class="card">
+            <div class="benefit-number">04</div>
+            <h3>
+              <span class="lang pt-br">Evolução com mais previsibilidade</span>
+              <span class="lang en-us" hidden>More predictable evolution</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">O time consegue expandir módulos, ajustar regras e tratar legado sem depender de reescritas traumáticas.</span>
+              <span class="lang en-us" hidden>The team can expand modules, adjust rules, and deal with legacy code without depending on traumatic rewrites.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="container">
+        <div class="section-head">
+          <h2>
+            <span class="lang pt-br">Onde o M3L faz mais sentido</span>
+            <span class="lang en-us" hidden>Where M3L makes the most sense</span>
+          </h2>
+          <p>
+            <span class="lang pt-br">O padrão foi pensado para servir desde o início de um produto até cenários em que o sistema já existe, mas precisa ganhar ordem sem interromper a entrega.</span>
+            <span class="lang en-us" hidden>The pattern was designed to help from the start of a product all the way to scenarios where software already exists but needs more order without interrupting delivery.</span>
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <span class="audience-tag">
+              <span class="lang pt-br">Início de projeto</span>
+              <span class="lang en-us" hidden>Project kickoff</span>
+            </span>
+            <h3>
+              <span class="lang pt-br">Quando a estrutura precisa nascer com direção</span>
+              <span class="lang en-us" hidden>When the structure needs to start with direction</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">M3L ajuda a evitar que o backend comece simples e termine improvisado. Ele oferece uma base clara para crescer com menos acoplamento acidental e mais consistência entre fluxos.</span>
+              <span class="lang en-us" hidden>M3L helps prevent a backend from starting simple and ending improvised. It offers a clear foundation to grow with less accidental coupling and more consistency across flows.</span>
+            </p>
+          </article>
+          <article class="card">
+            <span class="audience-tag">
+              <span class="lang pt-br">Correção gradual</span>
+              <span class="lang en-us" hidden>Gradual correction</span>
+            </span>
+            <h3>
+              <span class="lang pt-br">Quando já existe software, mas a estrutura perdeu a mão</span>
+              <span class="lang en-us" hidden>When software already exists but the structure has lost control</span>
+            </h3>
+            <p>
+              <span class="lang pt-br">O padrão também serve como referência de reorganização progressiva, permitindo corrigir partes tortas sem exigir uma ruptura total, um novo framework da moda ou uma religião arquitetural de cinco camadas e meio.</span>
+              <span class="lang en-us" hidden>The pattern also works as a reference for progressive reorganization, allowing teams to fix crooked parts without demanding a total rupture, a trendy new framework, or a five-and-a-half-layer architectural religion.</span>
             </p>
           </article>
         </div>
@@ -214,12 +326,12 @@
       <div class="container">
         <div class="section-head">
           <h2>
-            <span class="lang pt-br">Repositórios do ecossistema</span>
-            <span class="lang en-us" hidden>Ecosystem repositories</span>
+            <span class="lang pt-br">Implementações por stack</span>
+            <span class="lang en-us" hidden>Implementations by stack</span>
           </h2>
           <p>
-            <span class="lang pt-br">Cada repositório aplica os mesmos princípios do M3L, adaptados à linguagem, framework e estilo de cada stack.</span>
-            <span class="lang en-us" hidden>Each repository applies the same M3L principles, adapted to the language, framework, and style of each stack.</span>
+            <span class="lang pt-br">O M3L já está descrito e exemplificado em diferentes ecossistemas para facilitar adoção, comparação e adaptação.</span>
+            <span class="lang en-us" hidden>M3L is already documented and exemplified across different ecosystems to make adoption, comparison, and adaptation easier.</span>
           </p>
         </div>
 
@@ -229,16 +341,12 @@
               <span class="repo-tag">Laravel</span>
               <h3>m3l-laravel</h3>
               <p>
-                <span class="lang pt-br">Implementação do padrão M3L para Laravel, com organização modular em três camadas, convenções, exemplos práticos e diretrizes para backends claros, coesos e sustentáveis.</span>
-                <span class="lang en-us" hidden>Implementation of the M3L pattern for Laravel, with modular organization in three layers, conventions, practical examples, and guidelines for clear, cohesive, and sustainable backends.</span>
+                <span class="lang pt-br">Convenções, exemplos práticos e diretrizes para backends modulares em Laravel com Http, Domain e Infrastructure.</span>
+                <span class="lang en-us" hidden>Conventions, practical examples, and guidelines for modular backends in Laravel with Http, Domain, and Infrastructure.</span>
               </p>
             </div>
-            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-laravel/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">
-              Abrir repositório →
-            </a>
-            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-laravel/blob/main/README.en-US.md" target="_blank" rel="noreferrer">
-              Open repository →
-            </a>
+            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-laravel/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">Abrir repositório →</a>
+            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-laravel/blob/main/README.en-US.md" target="_blank" rel="noreferrer" hidden>Open repository →</a>
           </article>
 
           <article class="card">
@@ -246,16 +354,12 @@
               <span class="repo-tag">Spring Boot</span>
               <h3>m3l-springboot</h3>
               <p>
-                <span class="lang pt-br">Implementação do padrão M3L para Spring Boot, com convenções, exemplos práticos e diretrizes para construir aplicações backend claras, coesas e sustentáveis com baixo acoplamento.</span>
-                <span class="lang en-us" hidden>Implementation of the M3L pattern for Spring Boot, with conventions, practical examples, and guidelines for building clear, cohesive, and sustainable backend applications with low coupling.</span>
+                <span class="lang pt-br">Aplicação do padrão no ecossistema Java com foco em clareza estrutural, baixo acoplamento e crescimento sustentável.</span>
+                <span class="lang en-us" hidden>Application of the pattern in the Java ecosystem focused on structural clarity, low coupling, and sustainable growth.</span>
               </p>
             </div>
-            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-springboot/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">
-              Abrir repositório →
-            </a>
-            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-springboot/blob/main/README.en-US.md" target="_blank" rel="noreferrer">
-              Open repository →
-            </a>
+            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-springboot/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">Abrir repositório →</a>
+            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-springboot/blob/main/README.en-US.md" target="_blank" rel="noreferrer" hidden>Open repository →</a>
           </article>
 
           <article class="card">
@@ -263,16 +367,12 @@
               <span class="repo-tag">Node.js</span>
               <h3>m3l-node</h3>
               <p>
-                <span class="lang pt-br">Implementação do padrão M3L para Node.js, com convenções, exemplos práticos e diretrizes para construir aplicações backend claras, coesas e sustentáveis com disciplina arquitetural.</span>
-                <span class="lang en-us" hidden>Implementation of the M3L pattern for Node.js, with conventions, practical examples, and guidelines for building clear, cohesive, and sustainable backend applications with architectural discipline.</span>
+                <span class="lang pt-br">Diretrizes e exemplos em Node.js + TypeScript para estruturar backends com mais previsibilidade e disciplina arquitetural.</span>
+                <span class="lang en-us" hidden>Guidelines and examples in Node.js + TypeScript for structuring backends with more predictability and architectural discipline.</span>
               </p>
             </div>
-            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-node/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">
-              Abrir repositório →
-            </a>
-            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-node/blob/main/README.en-US.md" target="_blank" rel="noreferrer">
-              Open repository →
-            </a>
+            <a class="repo-link lang pt-br" href="https://github.com/m3larch/m3l-node/blob/main/README.pt-BR.md" target="_blank" rel="noreferrer">Abrir repositório →</a>
+            <a class="repo-link lang en-us" href="https://github.com/m3larch/m3l-node/blob/main/README.en-US.md" target="_blank" rel="noreferrer" hidden>Open repository →</a>
           </article>
         </div>
       </div>
@@ -288,8 +388,8 @@
             </h2>
           </div>
           <p class="quote">
-            <span class="lang pt-br"><strong>M3L não existe para deixar o projeto bonito.</strong> Existe para deixar o projeto entendível, revisável e evolutivo. A regra é simples: cada arquivo deve nascer na camada certa e usar o framework na dose certa.</span>
-            <span class="lang en-us" hidden><strong>M3L does not exist to make a project look pretty.</strong> It exists to make a project understandable, reviewable, and evolvable. The rule is simple: every file must be born in the right layer and use the framework in the right dose.</span>
+            <span class="lang pt-br"><strong>M3L não existe para deixar o projeto bonito.</strong> Existe para deixá-lo entendível, revisável e evolutivo. A regra é simples: cada arquivo deve nascer na camada certa e usar o framework na dose certa.</span>
+            <span class="lang en-us" hidden><strong>M3L does not exist to make a project look pretty.</strong> It exists to make it understandable, reviewable, and evolvable. The rule is simple: every file must be born in the right layer and use the framework in the right dose.</span>
           </p>
         </div>
 
@@ -301,8 +401,8 @@
             </h2>
           </div>
           <p class="quote">
-            <span class="lang pt-br">Comece pelo repositório da stack que você usa. Leia o README, veja a estrutura proposta e adapte com disciplina. Arquitetura boa não é a que impressiona no primeiro dia; é a que continua fazendo sentido no dia 200.</span>
-            <span class="lang en-us" hidden>Start with the repository for the stack you use. Read the README, review the proposed structure, and adapt it with discipline. Good architecture is not the one that impresses on day one; it is the one that still makes sense on day 200.</span>
+            <span class="lang pt-br">Comece pela stack que seu time já usa. Leia o material, veja a estrutura proposta e adapte com disciplina. Arquitetura boa não é a que impressiona no primeiro dia; é a que continua fazendo sentido no dia 200.</span>
+            <span class="lang en-us" hidden>Start with the stack your team already uses. Read the material, review the proposed structure, and adapt it with discipline. Good architecture is not the one that impresses on day one; it is the one that still makes sense on day 200.</span>
           </p>
         </div>
       </div>
