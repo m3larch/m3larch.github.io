@@ -215,6 +215,10 @@ section {
   color: var(--muted);
 }
 
+#about .section-head {
+  max-width: none;
+}
+
 .grid-2,
 .grid-3,
 .grid-4 {
