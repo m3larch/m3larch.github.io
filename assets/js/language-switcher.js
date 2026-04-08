@@ -1,6 +1,7 @@
 (() => {
   const STORAGE_KEY = 'm3l-language';
-  const LANGUAGE_FALLBACK = 'pt-br';
+  const FALLBACK_LANGUAGE = 'pt-br';
+
   const TITLES = {
     'pt-br': 'M3L Architecture',
     'en-us': 'M3L Architecture',
@@ -11,59 +12,83 @@
     'en-us': 'M3L Architecture — Modular in 3 Layers. An architectural pattern for modular, clear, cohesive, and sustainable backends.',
   };
 
-  const normalizeLanguage = (lang) => lang === 'en-us' ? 'en-us' : LANGUAGE_FALLBACK;
+  function normalizeLanguage(language) {
+    return language === 'en-us' ? 'en-us' : 'pt-br';
+  }
 
-  const applyLocalizedAttributes = (lang) => {
+  function detectBrowserLanguage() {
+    const browserLanguage = (navigator.language || '').toLowerCase();
+
+    if (browserLanguage.startsWith('pt')) {
+      return 'pt-br';
+    }
+
+    if (browserLanguage.startsWith('en')) {
+      return 'en-us';
+    }
+
+    return FALLBACK_LANGUAGE;
+  }
+
+  function applyLocalizedAttributes(language) {
     document.querySelectorAll('[data-aria-label-pt-br]').forEach((element) => {
-      const value = lang === 'pt-br' ? element.dataset.ariaLabelPtBr : element.dataset.ariaLabelEnUs;
+      const value = language === 'pt-br'
+        ? element.dataset.ariaLabelPtBr
+        : element.dataset.ariaLabelEnUs;
+
       if (value) {
         element.setAttribute('aria-label', value);
       }
     });
-  };
+  }
 
-  const applyLanguage = (language) => {
-    const lang = normalizeLanguage(language);
+  function applyLanguage(language, persist = true) {
+    const selectedLanguage = normalizeLanguage(language);
     const select = document.getElementById('language-switcher');
 
     document.querySelectorAll('.lang').forEach((element) => {
       element.hidden = true;
     });
 
-    document.querySelectorAll(`.lang.${lang}`).forEach((element) => {
+    document.querySelectorAll(`.lang.${selectedLanguage}`).forEach((element) => {
       element.hidden = false;
     });
 
-    applyLocalizedAttributes(lang);
+    applyLocalizedAttributes(selectedLanguage);
 
-    document.documentElement.lang = lang === 'pt-br' ? 'pt-BR' : 'en-US';
-    document.documentElement.setAttribute('data-language', lang);
-    document.title = TITLES[lang] ?? TITLES[LANGUAGE_FALLBACK];
+    document.documentElement.lang = selectedLanguage === 'pt-br' ? 'pt-BR' : 'en-US';
+    document.documentElement.setAttribute('data-language', selectedLanguage);
+    document.title = TITLES[selectedLanguage] ?? TITLES[FALLBACK_LANGUAGE];
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', DESCRIPTIONS[lang] ?? DESCRIPTIONS[LANGUAGE_FALLBACK]);
+      metaDescription.setAttribute(
+        'content',
+        DESCRIPTIONS[selectedLanguage] ?? DESCRIPTIONS[FALLBACK_LANGUAGE]
+      );
     }
 
     if (select) {
-      select.value = lang;
+      select.value = selectedLanguage;
     }
 
-    localStorage.setItem(STORAGE_KEY, lang);
-  };
+    if (persist) {
+      localStorage.setItem(STORAGE_KEY, selectedLanguage);
+    }
+  }
 
   document.addEventListener('DOMContentLoaded', () => {
     const select = document.getElementById('language-switcher');
-    const savedLanguage = normalizeLanguage(localStorage.getItem(STORAGE_KEY));
-    const browserLanguage = (navigator.language || '').toLowerCase();
-    const detectedLanguage = browserLanguage.startsWith('en') ? 'en-us' : LANGUAGE_FALLBACK;
-    const initialLanguage = localStorage.getItem(STORAGE_KEY) ? savedLanguage : detectedLanguage;
+    const savedLanguage = localStorage.getItem(STORAGE_KEY);
+    const initialLanguage = savedLanguage
+      ? normalizeLanguage(savedLanguage)
+      : detectBrowserLanguage();
 
-    applyLanguage(initialLanguage);
+    applyLanguage(initialLanguage, Boolean(savedLanguage));
 
     if (select) {
       select.addEventListener('change', (event) => {
-        applyLanguage(event.target.value);
+        applyLanguage(event.target.value, true);
       });
     }
   });
