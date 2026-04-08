@@ -212,6 +212,12 @@ section {
 
 .section-head {
   margin-bottom: 22px;
+  max-width: 760px;
+}
+
+#about .section-head {
+  margin-bottom: 22px;
+  max-width: none;
 }
 
 .section-head h2 {
